@@ -6,36 +6,7 @@
     </div>
   </div>
   <div class="chat-main">
-    <div class="chat-message">
-      <div class="chat-upper-message">
-        <div class="chat-user">
-          Tom
-        </div>
-        <div class="chat-date">
-          2022/06/17(Fri) 14:19:00
-        </div>
-      </div>
-      <div class="chat-lower-message">
-        <div class="chat-content">
-          おはよう
-        </div>
-      </div>
-    </div>
-    <div class="chat-message">
-      <div class="chat-upper-message">
-        <div class="chat-user">
-          Tom
-        </div>
-        <div class="chat-date">
-          2022/06/17(Fri) 14:23:00
-        </div>
-      </div>
-      <div class="chat-lower-message">
-        <div class="chat-content">
-          こんばんは
-        </div>
-      </div>
-    </div>
+    <%= render partial: 'message', collection: @messages %>
   </div>
   <div class="">
   <%= form_with model: [@room, @message], class: 'chat-bottom', local: true do |f| %>
